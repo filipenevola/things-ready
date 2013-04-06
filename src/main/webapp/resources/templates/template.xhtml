@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view>
+	<h:head>
+		<meta charset="utf-8" />
+		<title><ui:insert name="title">Things Ready by Quave</ui:insert></title>
+
+		<link rel="icon" type="image/vnd.microsoft.icon"
+			href="#{request.contextPath}/resources/images/favicon.ico" />
+		<link rel="SHORTCUT ICON" type="image/vnd.microsoft.icon"
+			href="#{request.contextPath}/resources/images/favicon.ico" />
+
+
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="quave" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css"
+			rel="stylesheet" />
+		<h:outputStylesheet library="css" name="bootstrap-custom.css"
+			rel="stylesheet" />
+		<h:outputStylesheet library="bootstrap/css"
+			name="bootstrap-responsive.min.css" rel="stylesheet" />
+
+		<h:outputStylesheet library="css" name="jquery-ui.css"
+			rel="stylesheet" />
+
+		<h:outputStylesheet library="css" name="primefaces-custom.css"
+			rel="stylesheet" />
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>>
+			<h:outputScript library="bootstrap/js" name="html5shiv.js" />
+	    <![endif]-->
+
+	</h:head>
+
+	<h:body>
+		<ui:insert name="metadata">
+		</ui:insert>
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse"
+						data-target=".nav-collapse">
+						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<ui:insert name="topo-esquerda">
+						<a class="brand" href="#{request.contextPath}/">Things Ready</a>
+					</ui:insert>
+					<div class="nav-collapse collapse">
+
+						<ui:insert name="nav-esquerda"></ui:insert>
+						<ui:insert name="nav-direita"></ui:insert>
+					</div>
+					<!--/.nav-collapse -->
+				</div>
+			</div>
+		</div>
+
+		<ui:insert name="conteudo"></ui:insert>
+		<hr />
+
+		<footer>
+		<center>
+			<ui:insert name="footer">
+				<p>
+					Things Ready powered by <a href="http://quave.com.br/"
+						target="_blank"><img
+						src="#{request.contextPath}/resources/images/quave.png"
+						width="95px" height="30px" alt="quave" /></a>
+				</p>
+			</ui:insert>
+		</center>
+		</footer>
+
+		<h:outputScript library="js/libs" name="jquery-1.9.1.min.js" />
+		<h:outputScript library="js/libs" name="jquery-ui.js" />
+		<h:outputScript library="js/libs" name="jquery.cookie.js" />
+		<h:outputScript library="js/libs" name="jquery.fileupload.js" />
+		<h:outputScript library="js/libs" name="jquery.maskedinput.min.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap-transition.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap-collapse.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap-tooltip.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap-popover.js" />
+		<h:outputScript library="bootstrap/js" name="bootstrap-tour.js" />
+		<h:outputScript library="js" name="util.js" />
+		<h:outputScript library="js/tour" name="tour.js" />
+		<ui:insert name="js"></ui:insert>
+	</h:body>
+
+</f:view>
+</html>
