@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pretty="http://ocpsoft.com/prettyfaces">
+
+    <ui:composition template="/resources/template.xhtml">
+        <ui:define name="body-content">
+            <h:dataTable value="#{taskView.tasks}" var="task">
+                <h:column>
+                    <f:facet name="header">                        
+                        <h:outputText value="Título"/>
+                    </f:facet>
+                    <pretty:link mappingId="show-task">
+                        <h:outputText value="#{task.title}"/>
+                        <f:param value="#{task.id}"/>
+                    </pretty:link>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">                        
+                        <h:outputText value="Descrição"/>
+                    </f:facet>
+                    <h:outputText value="#{task.description}"/>
+                </h:column>
+            </h:dataTable>
+        </ui:define>
+    </ui:composition>
+</html>

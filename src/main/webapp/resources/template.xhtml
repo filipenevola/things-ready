@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <f:view>
+        <h:head>
+            <meta charset="utf-8" />
+            <title><ui:insert name="title">Things Ready</ui:insert></title>
+
+            <link rel="icon" type="image/vnd.microsoft.icon"
+                  href="#{request.contextPath}/resources/images/favicon.ico" />
+            <link rel="SHORTCUT ICON" type="image/vnd.microsoft.icon"
+                  href="#{request.contextPath}/resources/images/favicon.ico" />
+
+
+            <meta name="description"
+                  content="Somos uma plataforma online para gestão de igrejas. Aqui você pode administrar seu hall de membros, usuários, malotes e muito mais!" />
+            <meta name="keywords"
+                  content="igrejafácil, igreja, gestão de igrejas, gestão, igreja, membros, malotes, secretária online" />
+            <meta name="author" content="quave" />
+
+            <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
+            <h:outputStylesheet library="bootstrap/css" name="bootstrap-responsive.min.css" />
+        </h:head>
+
+        <h:body>
+            <ui:insert name="body-content"></ui:insert>
+
+
+            <h:outputScript library="bootstrap/js" name="bootstrap.min.js" />
+        </h:body>
+
+    </f:view>
+</html>
