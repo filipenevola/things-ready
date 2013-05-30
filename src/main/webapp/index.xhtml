@@ -9,7 +9,7 @@
 
     <ui:composition template="/resources/template.xhtml">
         <ui:define name="body-content">
-            <h:dataTable value="#{taskView.tasks}" var="task">
+            <h:dataTable value="#{taskView.tasks}" var="task" styleClass="table table-striped table-bordered">
                 <h:column>
                     <f:facet name="header">                        
                         <h:outputText value="Título"/>

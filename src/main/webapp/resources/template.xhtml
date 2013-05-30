@@ -8,7 +8,6 @@
 
     <f:view>
         <h:head>
-            <meta charset="utf-8" />
             <title><ui:insert name="title">Things Ready</ui:insert></title>
 
             <link rel="icon" type="image/vnd.microsoft.icon"
@@ -16,11 +15,14 @@
             <link rel="SHORTCUT ICON" type="image/vnd.microsoft.icon"
                   href="#{request.contextPath}/resources/images/favicon.ico" />
 
-
+            <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+            
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            
             <meta name="description"
-                  content="Somos uma plataforma online para gestão de igrejas. Aqui você pode administrar seu hall de membros, usuários, malotes e muito mais!" />
+                  content="Controlar Tarefas focando nas entregas" />
             <meta name="keywords"
-                  content="igrejafácil, igreja, gestão de igrejas, gestão, igreja, membros, malotes, secretária online" />
+                  content="gestão, tarefas, entregas" />
             <meta name="author" content="quave" />
 
             <h:outputStylesheet library="bootstrap/css" name="bootstrap.min.css" />
